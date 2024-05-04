@@ -11,9 +11,9 @@
 }
 
 .container {
-  width: 100vw;
+  min-width: 100%;
   background-color: hsl(30, 38%, 92%);
-  height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,10 +25,11 @@
   display: flex;
   flex-direction: row;
   border-radius: 9px;
+  padding: 1rem 0;
 }
 
 .part-1 {
-  width: 50%;
+  min-width: 50%;
   background-image: url(image-product-desktop.jpg);
   background-size: cover;
   background-clip: content-box;
@@ -37,7 +38,7 @@
 
 .part-2 {
   width: 50%;
-  height: 100%;
+  min-height: 100%;
   border-radius: 0 9px 9px 0;
   background-color: white;
   padding: 2.3rem;
@@ -111,54 +112,29 @@ a:hover {
   background-color: hsl(159, 54%, 9%);
 }
 
-@media (min-width: 150px) and (max-width: 319px) {
-  .container {
-    min-width: 100%;
-    height: 100%;
-  }
-
+@media (min-width: 1090px) and (max-width: 1439px) {
   .card {
-    min-width: 95%;
-    height: auto;
-    flex-direction: column;
-    margin: 1.5rem 0;
-    padding: 0.5rem;
-  }
-
-  .part-1 {
-    min-width: 100%;
-    height: 70vh;
-    border-radius: 6px 6px 0 0;
-    background-position: center 30%;
-  }
-
-  .part-2 {
-    border-radius: 0 0 9px 9px;
-  }
-
-  h1 {
-    padding-right: 0;
-    font-size: 2rem;
-  }
-
-  p {
-    padding-right: 0;
-  }
-
-  .price {
-    padding-right: 0;
-  }
-
-  .cart {
-    width: 100%;
-  }
-
-  a {
-    padding: 0.7rem 0;
+    max-width: 55%;
+    min-height: 70%;
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 1089px) {
+  .card {
+    max-width: 80%;
+    min-height: 70%;
+    border: 2px red;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .card {
+    min-width: 90%;
+    height: auto;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 570px) {
   .container {
     min-width: 100%;
     height: 100%;
@@ -173,13 +149,14 @@ a:hover {
 
   .part-1 {
     min-width: 100%;
-    height: 50vh;
+    height: 70vh;
     border-radius: 6px 6px 0 0;
     background-position: center 30%;
   }
 
   .part-2 {
     border-radius: 0 0 9px 9px;
+    width: 100%;
   }
 
   h1 {
@@ -202,3 +179,70 @@ a:hover {
     padding: 0.7rem 0;
   }
 }
+
+@media (min-width: 150px) and (max-width: 319px) {
+  .card {
+    min-width: 95%;
+    min-height: 100%;
+    flex-direction: column;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+  }
+
+  .part-1 {
+    min-width: 100%;
+    height: 70vh;
+    border-radius: 6px 6px 0 0;
+    background-position: center 30%;
+  }
+
+  .part-2 {
+    border-radius: 0 0 9px 9px;
+    width: 100%;
+    height: auto;
+    border: 4px solid red;
+  }
+
+  h1 {
+    padding-right: 0;
+  }
+
+  p {
+    padding-right: 0;
+  }
+
+  .price {
+    padding-right: 0;
+  }
+
+  .cart {
+    width: 100%;
+  }
+
+  a {
+    padding: 0.7rem 0;
+  }
+}
+
+@media (orientation: landscape) {
+  /* .container {
+    min-width: 100%;
+    height: 100%;
+  }
+
+  /* .card {
+    min-width: 90%;
+    min-height: 100%;
+    margin: 1rem 0;
+  /* }
+
+  .part-1 {
+    min-width: 50%;
+    min-height: 100dvh;
+  }
+
+  .part-2 {
+    min-width: 50%;
+    min-height: 100dvh;
+  } */ */
+} */
